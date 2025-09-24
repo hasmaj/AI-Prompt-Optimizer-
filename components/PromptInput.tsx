@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface PromptInputProps {
@@ -9,7 +8,7 @@ interface PromptInputProps {
 export const PromptInput: React.FC<PromptInputProps> = ({ value, onChange }) => {
   return (
     <div>
-      <label htmlFor="prompt-input" className="block text-sm font-medium text-slate-300 mb-2">
+      <label htmlFor="prompt-input" className="block text-sm font-medium text-text-primary mb-2">
         Enter Your Prompt
       </label>
       <textarea
@@ -18,7 +17,7 @@ export const PromptInput: React.FC<PromptInputProps> = ({ value, onChange }) => 
         onChange={onChange}
         rows={6}
         placeholder="e.g., Explain quantum computing to a 5-year-old..."
-        className="w-full p-4 bg-slate-900 border border-slate-700 rounded-lg text-slate-200 placeholder-slate-500 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-300"
+        className="w-full p-4 bg-bg-input border border-border-primary rounded-lg text-text-primary placeholder-text-muted focus:ring-2 focus:ring-border-focus focus:border-border-focus transition-colors duration-300"
       />
     </div>
   );

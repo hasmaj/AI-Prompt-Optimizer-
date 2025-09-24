@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Model } from '../types';
 
@@ -12,7 +11,7 @@ const modelOptions = [Model.ChatGPT, Model.Claude, Model.Gemini, Model.Perplexit
 export const ModelSelector: React.FC<ModelSelectorProps> = ({ selectedModels, onToggle }) => {
   return (
     <div className="mt-6">
-      <h3 className="text-sm font-medium text-slate-300 mb-3">
+      <h3 className="text-sm font-medium text-text-primary mb-3">
         Optimize For
       </h3>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -22,10 +21,10 @@ export const ModelSelector: React.FC<ModelSelectorProps> = ({ selectedModels, on
             <button
               key={model}
               onClick={() => onToggle(model)}
-              className={`px-4 py-2 text-sm font-semibold rounded-lg border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 ${
+              className={`px-4 py-2 text-sm font-semibold rounded-lg border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-bg-secondary ${
                 isSelected
-                  ? 'bg-indigo-600 border-indigo-500 text-white'
-                  : 'bg-slate-700 border-slate-600 text-slate-300 hover:bg-slate-600 hover:border-slate-500'
+                  ? 'bg-accent-primary border-accent-primary text-text-inverted'
+                  : 'bg-bg-tertiary border-border-secondary text-text-primary hover:bg-bg-interactive hover:border-border-secondary'
               }`}
             >
               {model}
